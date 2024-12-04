@@ -10,4 +10,4 @@ steps:
       - 'push'
       - 'us-central1-docker.pkg.dev/caramel-vim-425013-h0/nwauche-100890276/nwauche-awosemo-yegbe-lamptey:$SHORT_SHA'
 options:
-  logging: 'REGIONAL_USER_OWNED_BUCKET'
+  logging: REGIONAL_USER_OWNED_BUCKET
