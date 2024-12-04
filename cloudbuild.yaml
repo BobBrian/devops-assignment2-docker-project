@@ -9,5 +9,19 @@ steps:
     args:
       - 'push'
       - 'us-central1-docker.pkg.dev/caramel-vim-425013-h0/nwauche-100890276/nwauche-awosemo-yegbe-lamptey:$SHORT_SHA'
+  - name: 'gcr.io/cloud-sdk'
+    args:
+      - 'gcloud'
+      - 'run'
+      - 'deploy'
+      - 'nwauche-awosemo-yegbe-lamptey'
+      - '--image'
+      - 'us-central1-docker.pkg.dev/caramel-vim-425013-h0/nwauche-100890276/nwauche-awosemo-yegbe-lamptey:$SHORT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+
 options:
-  logging: REGIONAL_USER_OWNED_BUCKET
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
